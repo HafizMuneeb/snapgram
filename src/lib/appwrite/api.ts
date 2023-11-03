@@ -355,7 +355,7 @@ export async function createPost(post: INewPost) {
     try {
       const updatedPost = await databases.createDocument(
         appwriteConfig.databaseId,
-        appwriteConfig.savesCollectionId,
+        appwriteConfig.saveCollectionId,
         ID.unique(),
         {
           user: userId,
@@ -375,7 +375,7 @@ export async function createPost(post: INewPost) {
     try {
       const statusCode = await databases.deleteDocument(
         appwriteConfig.databaseId,
-        appwriteConfig.savesCollectionId,
+        appwriteConfig.saveCollectionId,
         savedRecordId
       );
   

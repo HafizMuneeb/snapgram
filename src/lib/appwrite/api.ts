@@ -351,41 +351,41 @@ export async function createPost(post: INewPost) {
   }
   
   // ============================== SAVE POST
-  // export async function savePost(userId: string, postId: string) {
-  //   try {
-  //     const updatedPost = await databases.createDocument(
-  //       appwriteConfig.databaseId,
-  //       appwriteConfig.savesCollectionId,
-  //       ID.unique(),
-  //       {
-  //         user: userId,
-  //         post: postId,
-  //       }
-  //     );
+  export async function savePost(userId: string, postId: string) {
+    try {
+      const updatedPost = await databases.createDocument(
+        appwriteConfig.databaseId,
+        appwriteConfig.savesCollectionId,
+        ID.unique(),
+        {
+          user: userId,
+          post: postId,
+        }
+      );
   
-  //     if (!updatedPost) throw Error;
+      if (!updatedPost) throw Error;
   
-  //     return updatedPost;
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-  // // ============================== DELETE SAVED POST
-  // export async function deleteSavedPost(savedRecordId: string) {
-  //   try {
-  //     const statusCode = await databases.deleteDocument(
-  //       appwriteConfig.databaseId,
-  //       appwriteConfig.savesCollectionId,
-  //       savedRecordId
-  //     );
+      return updatedPost;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  // ============================== DELETE SAVED POST
+  export async function deleteSavedPost(savedRecordId: string) {
+    try {
+      const statusCode = await databases.deleteDocument(
+        appwriteConfig.databaseId,
+        appwriteConfig.savesCollectionId,
+        savedRecordId
+      );
   
-  //     if (!statusCode) throw Error;
+      if (!statusCode) throw Error;
   
-  //     return { status: "Ok" };
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+      return { status: "Ok" };
+    } catch (error) {
+      console.log(error);
+    }
+  }
   
   // ============================== GET USER'S POST
   export async function getUserPosts(userId?: string) {

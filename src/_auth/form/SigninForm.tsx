@@ -21,7 +21,7 @@ import z from "zod";
 import Loader from "@/components/shared/Loader";
 
 
-import { useSignInAccount } from "@/lib/react-query/queriesAndMutations";
+import { useSignInAccount } from "@/lib/react-query/queries";
 import { useUserContext } from "@/context/AuthContext";
 
 

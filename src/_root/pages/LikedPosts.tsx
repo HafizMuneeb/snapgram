@@ -1,7 +1,7 @@
 
 import GridPostList from "@/components/shared/GridPostList";
 import Loader from "@/components/shared/Loader";
-import { useGetCurrentUser } from "@/lib/react-query/queries";
+import { useGetCurrentUser } from "@/lib/react-query/usequeryMutation.ts";
 
 const LikedPosts = () => {
   const { data: currentUser } = useGetCurrentUser();

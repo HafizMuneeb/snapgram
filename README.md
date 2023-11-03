@@ -16,3 +16,7 @@ an infinite scroll feature, and amazing performance using React JS, Appwrite, Ty
 - Post Details
 - Explore Page
 - Search Results
+
+Snapshot of the app
+
+![snapgram](https://github.com/HafizMuneeb/snapgram/assets/124581370/a8468e8e-bdd9-42e1-97fd-6ee021533609)

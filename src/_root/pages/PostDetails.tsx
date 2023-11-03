@@ -6,7 +6,7 @@ import {
   useGetPostById,
   useGetUserPosts,
   useDeletePost,
-} from "@/lib/react-query/usequeryMutation.ts";
+} from "@/lib/react-query/queries";
 import { multiFormatDateString } from "@/lib/utils";
 import { useUserContext } from "@/context/AuthContext";
 import { Button } from "@/components/ui/button";

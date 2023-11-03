@@ -2,7 +2,7 @@ import { Models } from "appwrite";
 
 // import { useToast } from "@/components/ui/use-toast";
 
-import { useGetRecentPosts, useGetUsers } from "@/lib/react-query/usequeryMutation.ts";
+import { useGetRecentPosts, useGetUsers } from "@/lib/react-query/queries";
 import Loader from "@/components/shared/Loader";
 import PostCard from "@/components/shared/PostCard";
 import UserCard from "@/components/shared/UserCard";
